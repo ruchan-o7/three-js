@@ -40,11 +40,11 @@ const world = {
         color:0xffffff
     }
 };
-gui.add(world.planeMesh,'width',0.1,10).onChange(generate);
-gui.add(world.planeMesh,'height',0.1,10).onChange(generate);
-gui.add(world.planeMesh,"widthSegments",1,20).onChange(generate);
-gui.add(world.planeMesh,"heightSegments",1,20).onChange(generate);
-gui.add(world.planeMesh,"wireframeMode",false,true).onChange(wireframeModeChange);
+// gui.add(world.planeMesh,'width',0.1,10).onChange(generate);
+// gui.add(world.planeMesh,'height',0.1,10).onChange(generate);
+// gui.add(world.planeMesh,"widthSegments",1,20).onChange(generate);
+// gui.add(world.planeMesh,"heightSegments",1,20).onChange(generate);
+// gui.add(world.planeMesh,"wireframeMode",false,true).onChange(wireframeModeChange);
 
 gui.add(world.LightSource,"intensity",0,5).onChange(()=>{
     directionalLight.intensity = world.LightSource.intensity;
