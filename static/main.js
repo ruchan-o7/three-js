@@ -1,7 +1,7 @@
 import {OrbitControls} from "https://unpkg.com/three@0.119.1/examples/jsm/controls/OrbitControls.js"
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.127/build/three.module.js';
-    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.127/examples/jsm/loaders/GLTFLoader.js';
-import * as dat from "./node_modules/dat.gui/build/dat.gui.module.js"
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.127/examples/jsm/loaders/GLTFLoader.js';
+import * as dat from "dat.gui/build/dat.gui.module.js"
 
 
 const scene = new THREE.Scene();
@@ -13,7 +13,7 @@ const camera = new THREE.PerspectiveCamera
 );
 
 camera.position.z = 10
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(innerWidth,innerHeight);
 renderer.setPixelRatio(devicePixelRatio);
 document.body.appendChild(renderer.domElement);
@@ -40,6 +40,8 @@ const world = {
         color:0xffffff
     }
 };
+
+//jW2e5TKeHq
 // gui.add(world.planeMesh,'width',0.1,10).onChange(generate);
 // gui.add(world.planeMesh,'height',0.1,10).onChange(generate);
 // gui.add(world.planeMesh,"widthSegments",1,20).onChange(generate);
@@ -87,8 +89,9 @@ function wireframeModeChange(){
 //SCENE AND GEOMETRY
 
 
-loadAsset('/assets/spher-box.gltf');
-loadAsset('/assets/monkey.gltf')
+// loadAsset('/assets/spher-box.gltf');
+// loadAsset('/assets/monkey.gltf')
+loadAsset('/assets/hello world.glb')
 
 
  
